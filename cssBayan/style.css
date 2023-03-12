@@ -47,14 +47,14 @@ h1 {
     max-height: 0;
     display: flex;
     justify-content: center;
-    transition: transform 0.5s;
+    transition: all 0.5s;
 }
 
 .accordeon__item__title {
     position: relative;
     display: block;
     cursor: pointer;
-    transition: color 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     padding: 0.8em;
 }
 
@@ -81,7 +81,7 @@ h1 {
 }
 
 .item__input:checked ~ .accordeon__item__title .item__mem .item__mem__img{
-    width: 50%;
+    width: 55%;
     opacity: 1;
 }
 
@@ -114,7 +114,7 @@ h1 {
     }
 
     .accordeon__item__title:hover .item__mem__img {
-        width: 50%;
+        width: 55%;
         opacity: 1;
     }
 
