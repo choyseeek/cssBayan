@@ -26,6 +26,7 @@ h1::after{
 img{
     width: 60%;
     height: auto;
+    margin: 0.5em 0 0.5em 0;
 }
 
 .accordeon__wrapper{
@@ -33,14 +34,20 @@ img{
 }
 
 .item__mem{
-    margin: 0.5em 0 0.5em 0;
-    display: none;
+    height: 0;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
 }
 
-label{
+.accordeon__item__title{
+    position: relative;
     display: block;
     cursor: pointer;
-    transition: 0.5s;
+    transition: color 0.5s ease;
+    background: url(/cssBayan/cssBayan/assets/icons/chevron-down.svg) no-repeat;
+    background-position: right center;
 }
 
 .item__input{
@@ -48,14 +55,17 @@ label{
     position: absolute;
 }
 
-label:hover{
+.accordeon__item__title:hover{
     color: #fff;
 }
 
-.item__input:checked ~ .item__mem{
-    display: block;
+.item__input:checked ~ .accordeon__item__title{
+    color: #fff;
+    background: url(/cssBayan/cssBayan/assets/icons/chevron-up.svg) no-repeat;
+    background-position: top right;
 }
 
-.item__input:checked ~ label{
-    color: #fff;
-}
+.item__input:checked + .accordeon__item__title .item__mem {
+    height: 100%;
+    transform: scale(1); /* значение масштабирования при выборе чекбокса */
+  }
