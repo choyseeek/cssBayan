@@ -12,16 +12,17 @@ body{
 .wrapper{
     margin: 0 auto;
     width: clamp(50%, 50%, 50%);
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
-.accordeon__item::after, 
-h1::after{
-    content: " ";
-    display: block;
-    border: 0.01em solid white;
-    margin: 0.5em 0 0.5em 0;
+.accordeon__item {
+    border-bottom: 0.01em solid white;
 }
+
+h1 {
+    border-bottom: 0.01em solid white;
+    padding-bottom: 0.5em;
+  }
 
 img{
     width: 60%;
@@ -48,6 +49,7 @@ img{
     transition: color 0.5s ease;
     background: url(/cssBayan/cssBayan/assets/icons/chevron-down.svg) no-repeat;
     background-position: right center;
+    padding: 0.5em;
 }
 
 .item__input{
@@ -63,6 +65,7 @@ img{
     color: #fff;
     background: url(/cssBayan/cssBayan/assets/icons/chevron-up.svg) no-repeat;
     background-position: top right;
+    background-position-y: 0.7em;
 }
 
 .item__input:checked + .accordeon__item__title .item__mem {
