@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1D262D;
+    color: #E12179;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: clamp(50%, 50%, 50%);
+}
+
+h1::after{
+    content: " ";
+    display: block;
+    border: 0.1ch solid white;
+}
